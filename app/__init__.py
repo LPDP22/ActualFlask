@@ -14,7 +14,7 @@ def create_app(config_class=Config):
 
     with app.app_context():
         from .models import book_model
-        db.create_all()
+        db.create_all()        
 
         from .routes.book_routes import book_bp
         app.register_blueprint(book_bp)
